@@ -1,5 +1,6 @@
 import { FALLBACK_IMAGE } from '../../constants';
 import { Profile } from '../../interfaces/profile';
+import { SanitizedThemeConfig } from '../../interfaces/sanitized-config';
 import { skeleton } from '../../utils';
 import LazyImage from '../lazy-image';
 
@@ -8,6 +9,7 @@ interface AvatarCardProps {
   loading: boolean;
   avatarRing: boolean;
   resumeFileUrl?: string;
+  themeConfig: SanitizedThemeConfig;
 }
 
 /**
@@ -23,43 +25,46 @@ const AvatarCard: React.FC<AvatarCardProps> = ({
   loading,
   avatarRing,
   resumeFileUrl,
+  themeConfig,
 }): React.JSX.Element => {
   return (
     <div className="card shadow-lg card-sm bg-base-100">
       <div className="grid place-items-center py-8">
-        {loading || !profile ? (
-          <div className="avatar opacity-90">
-            <div className="mb-8 rounded-full w-32 h-32">
-              {skeleton({
-                widthCls: 'w-full',
-                heightCls: 'h-full',
-                shape: '',
-              })}
+        {themeConfig.displayAvatar ? (
+          loading || !profile ? (
+            <div className="avatar opacity-90">
+              <div className="mb-8 rounded-full w-32 h-32">
+                {skeleton({
+                  widthCls: 'w-full',
+                  heightCls: 'h-full',
+                  shape: '',
+                })}
+              </div>
             </div>
-          </div>
-        ) : (
-          <div className="avatar opacity-90">
-            <div
-              className={`mb-8 rounded-full w-32 h-32 ${
-                avatarRing
-                  ? 'ring-3 ring-primary ring-offset-base-100 ring-offset-2'
-                  : ''
-              }`}
-            >
-              {
-                <LazyImage
-                  src={profile.avatar ? profile.avatar : FALLBACK_IMAGE}
-                  alt={profile.name}
-                  placeholder={skeleton({
-                    widthCls: 'w-full',
-                    heightCls: 'h-full',
-                    shape: '',
-                  })}
-                />
-              }
+          ) : (
+            <div className="avatar opacity-90">
+              <div
+                className={`mb-8 rounded-full w-32 h-32 ${
+                  avatarRing
+                    ? 'ring-3 ring-primary ring-offset-base-100 ring-offset-2'
+                    : ''
+                }`}
+              >
+                {
+                  <LazyImage
+                    src={profile.avatar ? profile.avatar : FALLBACK_IMAGE}
+                    alt={profile.name}
+                    placeholder={skeleton({
+                      widthCls: 'w-full',
+                      heightCls: 'h-full',
+                      shape: '',
+                    })}
+                  />
+                }
+              </div>
             </div>
-          </div>
-        )}
+          )
+        ) : undefined}
         <div className="text-center mx-auto px-8">
           <h5 className="font-bold text-2xl">
             {loading || !profile ? (

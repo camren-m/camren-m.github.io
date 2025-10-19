@@ -137,6 +137,7 @@ const CONFIG = {
 
     // Display the ring in Profile picture
     displayAvatarRing: true,
+    displayAvatar: false,
 
     // Available themes. To remove any theme, exclude from here.
     themes: [

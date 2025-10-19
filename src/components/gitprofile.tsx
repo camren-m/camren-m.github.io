@@ -200,6 +200,7 @@ const GitProfile = ({ config }: { config: Config }) => {
                     />
                   )}
                   <AvatarCard
+                    themeConfig={sanitizedConfig.themeConfig}
                     profile={profile}
                     loading={loading}
                     avatarRing={sanitizedConfig.themeConfig.displayAvatarRing}

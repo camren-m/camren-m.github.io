@@ -123,6 +123,7 @@ export interface SanitizedThemeConfig {
   disableSwitch: boolean;
   respectPrefersColorScheme: boolean;
   displayAvatarRing: boolean;
+  displayAvatar: boolean;
   themes: Array<string>;
 }
 

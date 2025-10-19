@@ -126,6 +126,7 @@ export const getSanitizedConfig = (
         respectPrefersColorScheme:
           config?.themeConfig?.respectPrefersColorScheme || false,
         displayAvatarRing: config?.themeConfig?.displayAvatarRing ?? true,
+        displayAvatar: config?.themeConfig?.displayAvatar ?? true,
         themes: config?.themeConfig?.themes || DEFAULT_THEMES,
       },
       footer: config?.footer,

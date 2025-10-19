@@ -316,6 +316,11 @@ interface ThemeConfig {
   displayAvatarRing?: boolean;
 
   /**
+   * Whether to display the GitHub avatar
+   */
+  displayAvatar?: boolean;
+
+  /**
    * Available themes
    */
   themes?: Array<string>;
