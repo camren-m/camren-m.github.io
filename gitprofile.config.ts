@@ -76,7 +76,7 @@ const CONFIG = {
     telegram: '',
     website: 'https://info.camrenmum.me',
     phone: '',
-    email: '',
+    email: 'me@camrenmum.me',
   },
   resume: {
     fileUrl: '',
