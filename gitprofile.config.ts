@@ -14,7 +14,7 @@ const CONFIG = {
     github: {
       display: true, // Display GitHub projects?
       header: 'Github Projects',
-      mode: 'automatic', // Mode can be: 'automatic' or 'manual'
+      mode: 'manual', // Mode can be: 'automatic' or 'manual'
       automatic: {
         sortBy: 'stars', // Sort projects by 'stars' or 'updated'
         limit: 4, // How many projects to display.
@@ -23,11 +23,31 @@ const CONFIG = {
           projects: ["cmumme", "FingerprintTest"], // These projects will not be displayed. example: ['arifszn/my-project1', 'arifszn/my-project2']
         },
       },
+      manual: {
+        projects: ["XboxWheelCompatibility", "GeigerSat2", "DuinoMine", "matter-bootstrap"],
+      }
     },
     external: {
-      header: 'My Projects',
+      header: 'My Work',
       // To hide the `External Projects` section, keep it empty.
-      projects: [ ],
+      projects: [
+        {
+          title: 'The Grand Crossing',
+          description:
+            'A Roblox roleplay game, focusing on immersive gameplay and community interaction. I worked within the game\'s years-old, codebase performing codebase cleanliness tasks, hot fixes, and implementing new features that required an in-depth understanding of a foreign, complex, and fragmented codebase.',
+          imageUrl:
+            '/img/tgc-thumbnail.webp',
+          link: 'https://www.roblox.com/games/885450884/The-Grand-Crossing-Border-RP',
+        },
+        {
+          title: 'Stargate Horizons',
+          description:
+            'A Roblox sci-fi adventure game based on the Stargate franchise. As a Senior Developer, I lead the development team in creating new gameplay features, optimizing performance, and ensuring a smooth user experience. My role involves collaborating with designers, artists, and the community to bring the Stargate universe to life within the game.',
+          imageUrl:
+            '/img/sgh-thumbnail.webp',
+          link: 'https://www.roblox.com/games/3901984129/Stargate-Horizons',
+        },
+      ],
     },
   },
   seo: { title: 'Portfolio of Camren M', description: '', imageURL: '' },
