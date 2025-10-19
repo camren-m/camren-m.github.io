@@ -2,7 +2,7 @@
 
 const CONFIG = {
   github: {
-    username: 'cmumme', // Your GitHub org/user name. (This is the only required config)
+    username: 'camren-m', // Your GitHub org/user name. (This is the only required config)
   },
   /**
    * If you are deploying to https://<USERNAME>.github.io/, for example your repository is at https://github.com/arifszn/arifszn.github.io, set base to '/'.
@@ -20,12 +20,17 @@ const CONFIG = {
         limit: 4, // How many projects to display.
         exclude: {
           forks: true, // Forked projects will not be displayed if set to true.
-          projects: ["cmumme", "FingerprintTest"], // These projects will not be displayed. example: ['arifszn/my-project1', 'arifszn/my-project2']
+          projects: ['camren-m', 'FingerprintTest'], // These projects will not be displayed. example: ['arifszn/my-project1', 'arifszn/my-project2']
         },
       },
       manual: {
-        projects: ["XboxWheelCompatibility", "GeigerSat2", "DuinoMine", "matter-bootstrap"],
-      }
+        projects: [
+          'camren-m/XboxWheelCompatibility',
+          'camren-m/GeigerSat2',
+          'camren-m/DuinoMine',
+          'camren-m/matter-bootstrap',
+        ],
+      },
     },
     external: {
       header: 'My Work',
@@ -34,17 +39,15 @@ const CONFIG = {
         {
           title: 'The Grand Crossing',
           description:
-            'A Roblox roleplay game, focusing on immersive gameplay and community interaction. I worked within the game\'s years-old, codebase performing codebase cleanliness tasks, hot fixes, and implementing new features that required an in-depth understanding of a foreign, complex, and fragmented codebase.',
-          imageUrl:
-            '/img/tgc-thumbnail.webp',
+            "A Roblox roleplay game, focusing on immersive gameplay and community interaction. I worked within the game's years-old, codebase performing codebase cleanliness tasks, hot fixes, and implementing new features that required an in-depth understanding of a foreign, complex, and fragmented codebase.",
+          imageUrl: '/img/tgc-icon.webp',
           link: 'https://www.roblox.com/games/885450884/The-Grand-Crossing-Border-RP',
         },
         {
           title: 'Stargate Horizons',
           description:
             'A Roblox sci-fi adventure game based on the Stargate franchise. As a Senior Developer, I lead the development team in creating new gameplay features, optimizing performance, and ensuring a smooth user experience. My role involves collaborating with designers, artists, and the community to bring the Stargate universe to life within the game.',
-          imageUrl:
-            '/img/sgh-thumbnail.webp',
+          imageUrl: '/img/sgh-icon.webp',
           link: 'https://www.roblox.com/games/3901984129/Stargate-Horizons',
         },
       ],
@@ -79,37 +82,33 @@ const CONFIG = {
     fileUrl: '',
   },
   skills: [
-    'JavaScript',
-    'TypeScript',
-    'Express',
-    'Koa',
-    'React.js',
-    'Node.js',
-    'Next.js',
-    'Firebase',
     'Git',
+    'Rojo',
+    'React',
+    'Luau',
+    'roblox-ts',
+    'TypeScript',
+    'Firebase',
     'Docker',
-    'Unity',
-    'Roblox',
-    'CSS',
+    'Embedded Systems',
     'C#',
-    'Rojo'
+    'C++',
   ],
   experiences: [
     {
-      company: "Stargate Horizons",
-      position: "Senior Developer",
-      from: "July 2022",
-      to: "Present",
-      companyLink: "https://discord.gg/KWE9j87YHZ"
+      company: 'Stargate Horizons',
+      position: 'Senior Developer',
+      from: 'July 2022',
+      to: 'Present',
+      companyLink: 'https://discord.gg/KWE9j87YHZ',
     },
     {
-      company: "Venture Corporation",
-      position: "Programmer",
-      from: "August 2024",
-      to: "Present",
-      companyLink: "https://discord.gg/dBxQyBG"
-    }
+      company: 'Venture Corporation',
+      position: 'Programmer',
+      from: 'August 2024',
+      to: 'Present',
+      companyLink: 'https://discord.gg/dBxQyBG',
+    },
   ],
   certifications: [],
   educations: [],
@@ -126,7 +125,7 @@ const CONFIG = {
   // Track visitor interaction and behavior. https://www.hotjar.com
   hotjar: { id: '', snippetVersion: 6 },
   themeConfig: {
-    defaultTheme: 'dark',
+    defaultTheme: 'corporate',
 
     // Hides the switch in the navbar
     // Useful if you want to support a single color mode
