@@ -21,7 +21,7 @@ import {
 import { FaSquareThreads } from 'react-icons/fa6';
 import { MdLocationOn } from 'react-icons/md';
 import { RiDiscordFill, RiMailFill, RiPhoneFill } from 'react-icons/ri';
-import { SiResearchgate, SiX, SiUdemy } from 'react-icons/si';
+import { SiResearchgate, SiX, SiUdemy, SiRoblox } from 'react-icons/si';
 import { Profile } from '../../interfaces/profile';
 import {
   SanitizedGithub,
@@ -168,6 +168,8 @@ const DetailsCard = ({ profile, loading, social, github }: Props) => {
     return array;
   };
 
+  console.log(social);
+
   return (
     <div className="card shadow-lg card-sm bg-base-100">
       <div className="card-body">
@@ -231,6 +233,18 @@ const DetailsCard = ({ profile, loading, social, github }: Props) => {
                   title="LinkedIn:"
                   value={social.linkedin}
                   link={`https://www.linkedin.com/in/${social.linkedin}`}
+                />
+              )}
+              {(social?.robloxName || social?.robloxId) && (
+                <ListItem
+                  icon={<SiRoblox />}
+                  title="Roblox:"
+                  value={social.robloxName || social.robloxId}
+                  link={
+                    social.robloxId
+                      ? `https://roblox.com/users/${social.robloxId}/profile`
+                      : undefined
+                  }
                 />
               )}
               {social?.dribbble && (

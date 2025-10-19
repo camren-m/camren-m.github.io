@@ -63,6 +63,8 @@ export interface SanitizedSocial {
   phone?: string;
   email?: string;
   discord?: string;
+  robloxName?: string;
+  robloxId?: string;
 }
 
 export interface SanitizedResume {

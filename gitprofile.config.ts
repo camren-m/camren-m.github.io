@@ -66,6 +66,8 @@ const CONFIG = {
     behance: '',
     medium: '',
     dev: '',
+    robloxName: 'typechecked',
+    robloxId: '775254599',
     stackoverflow: '', // example: '1/jeff-atwood'
     discord: '',
     telegram: '',

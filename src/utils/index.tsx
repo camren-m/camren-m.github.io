@@ -82,6 +82,8 @@ export const getSanitizedConfig = (
         telegram: config?.social?.telegram,
         researchGate: config?.social?.researchGate,
         discord: config?.social?.discord,
+        robloxId: config?.social?.robloxId,
+        robloxName: config?.social?.robloxName,
       },
       resume: {
         fileUrl: config?.resume?.fileUrl || '',

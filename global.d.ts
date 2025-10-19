@@ -206,6 +206,16 @@ interface Social {
    * Discord username
    */
   discord?: string;
+
+  /**
+   * Roblox user ID
+   */
+  robloxId?: string;
+
+  /**
+   * Roblox username
+   */
+  robloxName?: string;
 }
 
 interface Resume {
