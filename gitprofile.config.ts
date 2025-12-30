@@ -181,7 +181,7 @@ const CONFIG = {
   },
 
   // Optional Footer. Supports plain text or HTML.
-  footer: `(c) 2025 CM Systems`,
+  footer: ``,
 
   enablePWA: true,
 };
